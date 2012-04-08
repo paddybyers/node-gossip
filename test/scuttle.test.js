@@ -1,9 +1,10 @@
-var Scuttle = require('scuttle').Scuttle;
-var PeerState = require('peer_state').PeerState;
+var assert = require('assert');
+var Scuttle = require('../lib/scuttle').Scuttle;
+var PeerState = require('../lib/peer_state').PeerState;
 
 module.exports = {
   // digest
-  'digest should have max versions we have seen' : function(assert) {
+  'digest should have max versions we have seen' : function() {
     var p1 = new PeerState();
     p1.max_version_seen = 10;
     var p2 = new PeerState();
@@ -24,18 +25,18 @@ module.exports = {
 
   // scuttle
   // scuttle new peer
-  'new peers should be in result' : function(assert) {
+  'new peers should be in result' : function() {
     var scuttle = new Scuttle({});
     var res = scuttle.scuttle( { 'new_peer' : 12 } ) 
     assert.deepEqual(['new_peer'], res.new_peers);
   },
-  'request all information about a new peer' : function(assert) {
+  'request all information about a new peer' : function() {
     var scuttle = new Scuttle({});
     var res = scuttle.scuttle( { 'new_peer' : 12 } ) 
     assert.deepEqual({ 'new_peer' : 0}, res.requests);
   },
   // scuttle deltas
-  'send peer all deltas for peers we know more about' : function(assert) {
+  'send peer all deltas for peers we know more about' : function() {
     var p1 = new PeerState();
     p1.updateLocal('hi', 'hello');
     p1.updateLocal('meh', 'goodbye');
