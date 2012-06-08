@@ -2,7 +2,9 @@
   "name": "node-gossip",
   "description": "An implementation of the gossip protocol with failure detection",
   "version": "0.0.1",
-  "dependencies": {},
+  "dependencies": {
+    "carrier": "0.x.x"
+  },
   "engines" : {
     "node" : ">=0.6.10",
     "npm" : ">= 1.1.0"
