@@ -1,10 +1,9 @@
 var Gossiper = require('../lib/gossiper').Gossiper;
-var sys = require('sys');
 
-var seed1 = new Gossiper(9000, []);
+var seed1 = new Gossiper(9000, [], '127.0.0.1');
 seed1.start();
 
-var seed2 = new Gossiper(9001, []);
+var seed2 = new Gossiper(9001, [], '127.0.0.1');
 seed2.start();
 
 var n = 0;

@@ -1,6 +1,7 @@
 var Gossiper = require('../lib/gossiper').Gossiper;
-// Create a seed peer.
-var seed = new Gossiper(9000, []);
+
+// Create a seed peer and listen on the local address
+var seed = new Gossiper(9000, [], '127.0.0.1');
 seed.start();
 
 // Create 20 new peers and point them at the seed (usually this would happen in 20 separate processes)
@@ -10,9 +11,7 @@ for(var i = 9001; i <= 9020;i++) {
   g.start();
   
   g.on('update', function(peer, k, v) {
-    if(k == 'somekey') {
-      console.log("peer " + peer + " set " + k + " to " + v); // peer 127.0.0.1:9999 set somekey to somevalue
-    }
+    console.log("peer " + peer + " set " + k + " to " + v);
   });
 }
 
