@@ -6,17 +6,17 @@
     "carrier": "*"
   },
   "devDependencies": {
-    "expresso": "*"
+    "tap": ">=0.2.5"
   },
   "scripts": {
-    "test": "expresso test/"
+    "test": "tap test/"
   },
-  "engines" : {
-    "node" : ">=0.6.4",
-    "npm" : ">= 1.1.0"
+  "engines": {
+    "node": ">=0.6.4",
+    "npm": ">= 1.1.0"
   },
   "repository":  {
-    "type" : "git",
-    "url" : "git://github.com/leetreveil/node-gossip.git"
+    "type": "git",
+    "url": "git://github.com/leetreveil/node-gossip.git"
   }
 }
