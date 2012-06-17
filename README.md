@@ -59,9 +59,6 @@ on('peer_alive', function(peer_name) {})
 on('peer_failed', function(peer_name) {})
 ```
 
-### Tests
-
-    expresso -I lib test/*
 
 ### TODO
 
