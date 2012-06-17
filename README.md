@@ -7,8 +7,10 @@ Check out the the scripts in the simulations/ directory for some examples.
 ### Usage
 
     var Gossiper = require('gossiper').Gossiper;
-    // Create a seed peer.
-    var seed = new Gossiper(9000, []);
+    // Create a seed peer that listens on localhost.
+    // You can drop the third argument to listen on
+    // the external interface.
+    var seed = new Gossiper(9000, [], '127.0.0.1');
     seed.start();
 
     // Create 20 new peers and point them at the seed (usually this would happen in 20 separate processes)
