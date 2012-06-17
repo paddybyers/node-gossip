@@ -1,0 +1,22 @@
+{
+  "name": "node-gossip",
+  "description": "An implementation of the gossip protocol with failure detection",
+  "version": "0.0.1",
+  "dependencies": {
+    "carrier": "*"
+  },
+  "devDependencies": {
+    "expresso": "*"
+  },
+  "scripts": {
+    "test": "expresso test/"
+  },
+  "engines" : {
+    "node" : ">=0.6.4",
+    "npm" : ">= 1.1.0"
+  },
+  "repository":  {
+    "type" : "git",
+    "url" : "git://github.com/leetreveil/node-gossip.git"
+  }
+}
