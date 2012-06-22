@@ -23,13 +23,13 @@ test('should have a high phi value after ten seconds', function (t) {
   t.end();
 })
 
-test('should only keep last 1000 values', function (t) {
+test('should only keep last 1001 values', function (t) {
   var afd = new AccrualFailureDetector();
   var time = 0;
   for (var i = 0;i < 2000;i++) {
     time += 1000;
     afd.add(time);
   }
-  t.equal(1000, afd.intervals.length);
+  t.equal(afd.intervals.length, 1001);
   t.end();
 })
