@@ -17,6 +17,6 @@
   },
   "repository":  {
     "type": "git",
-    "url": "git://github.com/leetreveil/node-gossip.git"
+    "url": "git://github.com/paddybyers/node-gossip.git#export"
   }
 }
